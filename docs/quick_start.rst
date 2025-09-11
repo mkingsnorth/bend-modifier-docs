@@ -44,18 +44,14 @@ Basic Use
     .. image:: _static/images/bend_modifier_rotate_gizmo.gif
       :alt: Rotation Controls
 
-6. *(Optional)* - **Limit Effect** — Restricts the bend to a portion of the object along the chosen axis.
+6. *(Optional)* - **Limit Effect** — Restricts the bend to a portion of the object along the chosen axis.  When enabled, set **Start** and **End** distances to define the limit window either on the modifier panel or by dragging the gizmo handles that appear.
 
     .. image:: _static/images/bend_modifier_limit_effect.gif
         :alt: Limit Effect
 
-    #. **Start, End**: Values are relative to the object’s full length on the chosen axis, which is always ``1.0``.  ``Start`` must be negative, ``End`` must be positive.  
-    #. ``Start = -0.5, End = 0.5`` → bend spans the whole object (like having no limits).  
-    #. Narrower ranges (e.g. ``-0.25`` to ``0.25``) → bend is only applied to the central region.  
-    #. Geometry outside the window continues straight along the tangent at the boundary.
-
-    .. image:: _static/images/limit_effect.jpg
-        :alt: Limit Effect 2
+    * **Start** and **End** are distances (in object units) measured along the bend’s **along-direction** from the *Center*. Inside this window the mesh follows a circular arc.   
+    * ``Start`` is negative, ``End`` must be positive.
+    * Outside the limit, the mesh continues **straight** along the correct end tangents (no kink).
         
 7. *(Optional)* **Vertex Group** — Enter a *Vertex Group Name* to weight the effect (0..1) across the mesh.
 
@@ -101,21 +97,12 @@ Parameter Reference
 
 * **Limit Effect**
 
-When enabled, only geometry with along-distance between **Start** and **End** is bent into the arc.
-
+When enabled, only geometry along the distance between **Start** and **End** is bent into the arc. 
     * **Start, End**
-        Define the limit window along the chosen axis. Values are relative to the object’s full length on that axis, which is always ``1.0``. ``Start`` must be negative, ``End`` must be positive.
-    
-        For example, ``Start = -0.5``, ``End = 0.5`` means the bend spans the whole object (like having no limits). Narrower ranges (e.g. ``-0.25`` to ``0.25``) mean only the central region is bent, with geometry outside the window continuing straight along the tangent at the boundary.
-
-* **Vertex Group Name**  
+        Define the limit window along the chosen axis. ``Start`` travels along the negative axis line, ``End`` travels along the positive axis line.
+        
+* **Vertex Group Name**
 
   Optional weight mask; vertices with weight 0 are unaffected, weight 1 receive full bending.
-
-
-Tips & Troubleshooting
-----------------------
-
-See the :ref:`Troubleshooting<troubleshooting>` page for common issues and tips.
 
 
