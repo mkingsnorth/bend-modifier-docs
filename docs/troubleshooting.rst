@@ -97,12 +97,18 @@ With a good mesh, the *Bend* modifier will work much better.
 When I bend an object, the result seems stretched.  How do I fix this?
 --------------------------------------------------------------------------------------
 
-When you scale the curve in regular object, it is stretching the curve's "global" coordinates which will also distort the mesh.
+If your bend looks **distorted or offset**, it may be because the object has unapplied **location, rotation, or scale** transforms. The Bend Modifier uses the object’s transform data, so unapplied transforms can cause skewing, stretching, or unexpected pivot points.
 
 .. image:: _static/images/scale_deform.jpg
    :alt: Troubleshooting
 
-To fix this, you can apply the scale to the curve by selecting it, and under the *Object* viewport menu select *Apply -> Scale*:
+To fix this:
+
+1. Select the object.
+2. Press :kbd:`Ctrl–A` → :guilabel:`Apply` → :guilabel:`All Transforms`.
+3. Re-add or adjust the Bend Modifier.
+
+Applying transforms ensures the modifier works with the object’s true geometry, producing clean, predictable bends.
 
 .. image:: _static/images/apply_scale.jpg
     :alt: Troubleshooting
