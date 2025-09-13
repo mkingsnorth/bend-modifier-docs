@@ -105,4 +105,8 @@ When enabled, only geometry along the distance between **Start** and **End** is 
 
   Optional weight mask; vertices with weight 0 are unaffected, weight 1 receive full bending.
 
+* **Advanced**
 
+    * **Use Global Coordinates**
+
+        When enabled, controls are in world coordinates. When disabled, controls are in local object coordinates.

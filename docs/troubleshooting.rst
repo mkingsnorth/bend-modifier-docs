@@ -97,7 +97,7 @@ With a good mesh, the *Bend* modifier will work much better.
 When I bend an object, the result seems stretched.  How do I fix this?
 --------------------------------------------------------------------------------------
 
-If your bend looks **distorted or offset**, it may be because the object has unapplied **location, rotation, or scale** transforms. The Bend Modifier uses the object’s transform data, so unapplied transforms can cause skewing, stretching, or unexpected pivot points.
+If your bend looks **distorted or offset**, it may be because the object has unapplied **location, rotation, or scale** transforms. The Bend Modifier uses the object’s transform data by default, so unapplied transforms can cause skewing, stretching, or unexpected pivot points.
 
 .. image:: _static/images/scale_deform.jpg
    :alt: Troubleshooting
@@ -109,6 +109,9 @@ To fix this:
 3. Re-add or adjust the Bend Modifier.
 
 Applying transforms ensures the modifier works with the object’s true geometry, producing clean, predictable bends.
+
+.. tip:: 
+   Alternatively, you can enable the **Use Global Coordinates** option in the modifier settings to apply the bend in world coordinates.
 
 .. image:: _static/images/apply_scale.jpg
     :alt: Troubleshooting
