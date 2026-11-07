@@ -17,6 +17,10 @@ Step 1: Download the Files
 
 #. Save these files together to a new folder where you want to store your **Blender Asset Library**.
 
+.. note::
+
+   Your browser may open ``blender_assets.cats.txt`` in a new tab instead of downloading it. If so, use **File → Save Page As** (or **Save As**) and save it into the same folder as ``bend_modifier.blend``. Keep the file name exactly as it is, as Blender won't recognise it if the browser adds an extra extension or changes the name.
+
 Step 2: Set Up Your Asset Library in Blender
 --------------------------------------------
 

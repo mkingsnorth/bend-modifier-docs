@@ -23,6 +23,12 @@ Add the Modifier
 2. Open the :guilabel:`Modifiers` tab.
 3. Click :guilabel:`Add Modifier` → :guilabel:`Deform` → **Bend**.
 
+.. note::
+
+   Your mesh needs enough geometry along its length to bend smoothly. A plain stretched cube only has vertices at its corners, so it will skew rather than curve.
+
+   To add more, enter Edit Mode, select everything, right-click and choose **Subdivide**, then increase **Number of Cuts** in the panel at the bottom left of the viewport. See :ref:`Tips and Troubleshooting<troubleshooting>` for more on this.
+
 Basic Use
 ---------
 
@@ -31,7 +37,7 @@ Basic Use
 
 
 1. **Choose Axis** — Pick **X**, **Y** or **Z** under *Axis*.
-   This is the bend **axis** (the hinge the bend rotates around).
+   Choose the axis that runs along the length of the part you want to bend. For example, use **X** for a long object lying along the X axis.
 
 2. **Set Angle** — Use *Angle* to define the total bend (e.g. ``90°`` for a quarter circle).
 
@@ -65,7 +71,7 @@ Using the Gizmo
 - **Rotate** the gizmo around the *Axis* to change *Direction*.
 - **Rotate** around the other axes to reorient the along-direction if needed.
 
-Thee gizmo changes the modifier parameters directly, so you can also type values in the panel.
+The gizmo changes the modifier parameters directly, so you can also type values in the panel.
 
 .. _parameter_reference:
 
@@ -77,7 +83,7 @@ Parameter Reference
 
 * **Axis (X/Y/Z)**  
 
-  Bend **axis** (the hinge). The mesh bends around this vector.
+  The direction the mesh bends along. Choose the axis that runs along the length of the part you want to bend.
 
 * **Angle**
 
