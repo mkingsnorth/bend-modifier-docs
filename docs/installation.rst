@@ -23,13 +23,23 @@ Step 2: Set Up Your Asset Library in Blender
 .. image:: _static/images/asset_preferences.jpg
    :alt: Asset Library
 
+*Asset Libraries under File Paths, as in Blender 5.1 and earlier. In Blender 5.2 and later, it has its own tab.*
+
 If you haven’t already set up an **Asset Library**, follow these steps:
 
 #. Open **Blender** and go to **Edit → Preferences**.
-#. Navigate to the **File Paths** section.
-#. Under **Asset Libraries**, click the **+** (*Add New*) button.
+#. Open the Asset Libraries settings. Where they are depends on your Blender version:
+
+   * **Blender 5.2 and later:** click the **Asset Libraries** tab.
+   * **Blender 4.5 to 5.1:** click the **File Paths** tab and find the **Asset Libraries** panel.
+
+#. Click the **+** (*Add New*) button.
 #. Name the library (e.g., “My Assets”) and select the folder where you saved the *Bend Modifier* ``.blend`` file.
 #. Click **Save Preferences**.
+
+.. note::
+
+   Add the folder under **Asset Libraries**, not **Script Directories**. The *Bend Modifier* is an asset rather than an add-on, so it won't appear in Blender if it is added as a script directory.
 
 You can then follow the steps in :ref:`How to Use<quick_start>`.
 

@@ -33,7 +33,7 @@ How It Works
 
 Follow the :ref:`How to Use<quick_start>` guide. Essentially:
 
-#. **Save the Bend Modifier .blend file** to Your Asset Library  - Set the .blend file asset directory to use it in any Blender project under Edit -> Preferences -> File Paths.
+#. **Save the Bend Modifier .blend file** to Your Asset Library  - Set the .blend file asset directory to use it in any Blender project under Edit -> Preferences -> Asset Libraries (or File Paths in Blender 5.1 and earlier).
 #. **Add the Modifier**: Select an object and go to *Deform - Bend* from the modifier panel.
 #. **Fine-Tune** the modifier's ::ref:`parameters<parameter_reference>`.
 
