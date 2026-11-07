@@ -27,7 +27,11 @@ Add the Modifier
 
    Your mesh needs enough geometry along its length to bend smoothly. A plain stretched cube only has vertices at its corners, so it will skew rather than curve.
 
-   To add more, enter Edit Mode, select everything, right-click and choose **Subdivide**, then increase **Number of Cuts** in the panel at the bottom left of the viewport. See :ref:`Tips and Troubleshooting<troubleshooting>` for more on this.
+   To add more, enter Edit Mode, select everything, right-click and choose **Subdivide**, then increase **Number of Cuts** in the panel at the bottom left of the viewport.
+
+   Alternatively, to leave your mesh unchanged, add a **Subdivision Surface** modifier, choose **Simple**, and set **Levels Viewport** and **Render** to 3 or 4. It must sit above **Bend** in the modifier stack, so drag it up if needed.
+
+   See :ref:`Tips and Troubleshooting<troubleshooting>` for more on this.
 
 Basic Use
 ---------
